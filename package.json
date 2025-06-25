@@ -1,0 +1,38 @@
+{
+  "name": "chatgpt-panel",
+  "version": "1.0.0",
+  "main": "out/extension.js",
+  "scripts": {
+    "build": "node build-webview.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "chatgpt-panel.chat",
+        "title": "Open ChatGPT Panel"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:chatgpt-panel.chat"
+  ],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@types/vscode": "^1.75.0",
+    "esbuild": "^0.17.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^2.6.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  }
+}
